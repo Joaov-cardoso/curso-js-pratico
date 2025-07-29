@@ -1,0 +1,14 @@
+function fazerLogin(event){
+    event.preventDefault();
+    const usuario = document.getElementById("username").value.trim();
+    const senha = document.getElementById("senha").value.trim();
+
+    if (usuario === "root" && senha === "admin"){
+        window.location.href = "dashboard.html";
+    }else {
+        alert("Credenciais Inválivadas. Tente Novamente.");
+    }
+
+}
+
+document.getElementById("loginForm").addEventListener("submit", fazerLogin);
